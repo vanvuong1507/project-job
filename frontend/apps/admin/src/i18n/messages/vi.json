@@ -1,0 +1,137 @@
+{
+  "metadata": {
+    "title": "Quản trị doanh thu"
+  },
+  "shell": {
+    "appName": "Quản trị doanh thu",
+    "nav": {
+      "label": "Các mục quản trị",
+      "weeklyData": "Dữ liệu tuần",
+      "events": "Sự kiện"
+    },
+    "logout": "Đăng xuất",
+    "roles": {
+      "ADMIN": "Quản trị viên",
+      "VIEWER": "Người xem"
+    },
+    "loading": "Đang tải"
+  },
+  "auth": {
+    "title": "Đăng nhập",
+    "email": "Email",
+    "password": "Mật khẩu",
+    "submit": "Đăng nhập",
+    "checkFields": "Vui lòng kiểm tra các trường được đánh dấu.",
+    "invalidCredentials": "Email hoặc mật khẩu không đúng",
+    "tooManyAttempts": "Bạn đã thử quá nhiều lần. Vui lòng thử lại sau {minutes} phút.",
+    "sessionExpired": "Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại."
+  },
+  "weekPicker": {
+    "previous": "Tuần trước",
+    "next": "Tuần sau",
+    "weekStarting": "Tuần bắt đầu"
+  },
+  "metrics": {
+    "title": "Dữ liệu tuần",
+    "description": "Doanh thu, chi phí nhân công và lượt khách theo ngày, hiển thị trên bảng doanh thu.",
+    "day": "Ngày",
+    "fields": {
+      "posRevenue": "Doanh thu POS",
+      "eatclubRevenue": "Doanh thu Eatclub",
+      "labourCost": "Chi phí nhân công",
+      "covers": "Lượt khách"
+    },
+    "cellLabel": "{field}, {day} {date}",
+    "totals": {
+      "row": "Tổng tuần",
+      "revenue": "Doanh thu {value}",
+      "labour": "Nhân công {value}",
+      "covers": "Lượt khách {value}"
+    },
+    "unsaved": "Có thay đổi chưa lưu",
+    "save": "Lưu tuần",
+    "readOnly": "Chỉ có quyền xem — hãy nhờ quản trị viên thay đổi các giá trị này.",
+    "viewDashboard": "Xem bảng doanh thu của tuần này",
+    "leaveConfirm": "Tuần này còn thay đổi chưa lưu. Rời đi mà không lưu?",
+    "saved": "Đã lưu dữ liệu tuần",
+    "saveFailed": "Không lưu được dữ liệu tuần",
+    "fixValues": "Vui lòng sửa các giá trị được đánh dấu.",
+    "forbidden": "Bạn không có quyền chỉnh sửa dữ liệu."
+  },
+  "events": {
+    "title": "Sự kiện",
+    "description": "Các sự kiện tích cực và tiêu cực hiển thị dưới dạng điểm đánh dấu trên bảng doanh thu.",
+    "add": "Thêm sự kiện",
+    "edit": "Sửa",
+    "delete": "Xoá",
+    "editLabel": "Sửa {title}",
+    "deleteLabel": "Xoá {title}",
+    "empty": {
+      "title": "Tuần này chưa có sự kiện",
+      "description": "Thêm sự kiện để giải thích một lần doanh thu tăng hoặc giảm trên bảng doanh thu."
+    },
+    "columns": {
+      "date": "Ngày",
+      "impact": "Tác động",
+      "title": "Tiêu đề",
+      "description": "Mô tả",
+      "actions": "Thao tác"
+    },
+    "impact": {
+      "POSITIVE": "Tích cực",
+      "NEGATIVE": "Tiêu cực"
+    },
+    "form": {
+      "addTitle": "Thêm sự kiện",
+      "editTitle": "Sửa sự kiện",
+      "intro": "Sự kiện hiển thị dưới dạng điểm đánh dấu tác động trên biểu đồ.",
+      "date": "Ngày",
+      "impact": "Tác động",
+      "title": "Tiêu đề",
+      "titleHint": "Tối đa 120 ký tự",
+      "description": "Mô tả",
+      "descriptionHint": "Không bắt buộc",
+      "submitAdd": "Thêm sự kiện",
+      "submitEdit": "Lưu thay đổi",
+      "cancel": "Huỷ"
+    },
+    "confirmDelete": {
+      "title": "Xoá sự kiện này?",
+      "description": "\"{title}\" sẽ không còn hiển thị trên biểu đồ."
+    },
+    "added": "Đã thêm sự kiện",
+    "updated": "Đã cập nhật sự kiện",
+    "deleted": "Đã xoá sự kiện",
+    "saveFailed": "Không lưu được sự kiện",
+    "deleteFailed": "Không xoá được sự kiện",
+    "fixFields": "Vui lòng sửa các trường được đánh dấu.",
+    "gone": "Sự kiện này không còn tồn tại.",
+    "forbidden": "Bạn không có quyền thay đổi sự kiện.",
+    "listLabel": "Sự kiện trong tuần"
+  },
+  "forbidden": {
+    "metaTitle": "Không có quyền truy cập",
+    "title": "Bạn không có quyền truy cập trang này",
+    "description": "Đang đăng nhập với {email} ({role}). Hãy liên hệ quản trị viên nếu cần quyền truy cập.",
+    "back": "Về trang Dữ liệu tuần"
+  },
+  "pageError": {
+    "title": "Không tải được trang này",
+    "description": "Dữ liệu tạm thời không khả dụng. Vui lòng thử lại."
+  },
+  "validation": {
+    "email": "Nhập email hợp lệ",
+    "password": "Nhập mật khẩu",
+    "date": "Nhập ngày hợp lệ (YYYY-MM-DD)",
+    "monday": "Tuần phải bắt đầu vào thứ Hai",
+    "number": "Nhập một số",
+    "nonNegative": "Phải từ 0 trở lên",
+    "decimals": "Tối đa 2 chữ số thập phân",
+    "integer": "Phải là số nguyên",
+    "sevenDays": "Cần đúng 7 ngày",
+    "impact": "Chọn tác động",
+    "titleRequired": "Tiêu đề là bắt buộc",
+    "titleMax": "Tối đa 120 ký tự",
+    "descriptionMax": "Tối đa 500 ký tự"
+  }
+}

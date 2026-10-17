@@ -1,0 +1,137 @@
+{
+  "metadata": {
+    "title": "Revenue Admin"
+  },
+  "shell": {
+    "appName": "Revenue Admin",
+    "nav": {
+      "label": "Admin sections",
+      "weeklyData": "Weekly Data",
+      "events": "Events"
+    },
+    "logout": "Logout",
+    "roles": {
+      "ADMIN": "Admin",
+      "VIEWER": "Viewer"
+    },
+    "loading": "Loading"
+  },
+  "auth": {
+    "title": "Sign in",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Sign in",
+    "checkFields": "Check the highlighted fields.",
+    "invalidCredentials": "Invalid credentials",
+    "tooManyAttempts": "Too many attempts. Try again in {minutes, plural, one {# minute} other {# minutes}}.",
+    "sessionExpired": "Your session has expired. Sign in again."
+  },
+  "weekPicker": {
+    "previous": "Previous week",
+    "next": "Next week",
+    "weekStarting": "Week starting"
+  },
+  "metrics": {
+    "title": "Weekly Data",
+    "description": "Daily revenue, labour cost and covers shown on the revenue dashboard.",
+    "day": "Day",
+    "fields": {
+      "posRevenue": "POS Revenue",
+      "eatclubRevenue": "Eatclub Revenue",
+      "labourCost": "Labour Cost",
+      "covers": "Covers"
+    },
+    "cellLabel": "{field}, {day} {date}",
+    "totals": {
+      "row": "Week total",
+      "revenue": "Revenue {value}",
+      "labour": "Labour {value}",
+      "covers": "Covers {value}"
+    },
+    "unsaved": "Unsaved changes",
+    "save": "Save week",
+    "readOnly": "Read-only access — ask an admin to change these values.",
+    "viewDashboard": "View dashboard for this week",
+    "leaveConfirm": "You have unsaved changes for this week. Leave without saving?",
+    "saved": "Week saved",
+    "saveFailed": "Couldn't save the week",
+    "fixValues": "Fix the highlighted values.",
+    "forbidden": "You don't have permission to edit data."
+  },
+  "events": {
+    "title": "Events",
+    "description": "Positive and negative events shown as markers on the revenue dashboard.",
+    "add": "Add event",
+    "edit": "Edit",
+    "delete": "Delete",
+    "editLabel": "Edit {title}",
+    "deleteLabel": "Delete {title}",
+    "empty": {
+      "title": "No events this week",
+      "description": "Add an event to explain a revenue spike or dip on the dashboard."
+    },
+    "columns": {
+      "date": "Date",
+      "impact": "Impact",
+      "title": "Title",
+      "description": "Description",
+      "actions": "Actions"
+    },
+    "impact": {
+      "POSITIVE": "Positive",
+      "NEGATIVE": "Negative"
+    },
+    "form": {
+      "addTitle": "Add event",
+      "editTitle": "Edit event",
+      "intro": "Events appear as impact markers on the dashboard chart.",
+      "date": "Date",
+      "impact": "Impact",
+      "title": "Title",
+      "titleHint": "Up to 120 characters",
+      "description": "Description",
+      "descriptionHint": "Optional",
+      "submitAdd": "Add event",
+      "submitEdit": "Save changes",
+      "cancel": "Cancel"
+    },
+    "confirmDelete": {
+      "title": "Delete this event?",
+      "description": "\"{title}\" will no longer appear on the dashboard chart."
+    },
+    "added": "Event added",
+    "updated": "Event updated",
+    "deleted": "Event deleted",
+    "saveFailed": "Couldn't save the event",
+    "deleteFailed": "Couldn't delete the event",
+    "fixFields": "Fix the highlighted fields.",
+    "gone": "This event no longer exists.",
+    "forbidden": "You don't have permission to change events.",
+    "listLabel": "Events this week"
+  },
+  "forbidden": {
+    "metaTitle": "Access denied",
+    "title": "You don't have access to this page",
+    "description": "Signed in as {email} ({role}). Ask an admin if you need access.",
+    "back": "Back to Weekly Data"
+  },
+  "pageError": {
+    "title": "We couldn't load this page",
+    "description": "The data is temporarily unavailable. Please try again."
+  },
+  "validation": {
+    "email": "Enter a valid email",
+    "password": "Enter your password",
+    "date": "Use a valid date (YYYY-MM-DD)",
+    "monday": "The week must start on a Monday",
+    "number": "Enter a number",
+    "nonNegative": "Must be 0 or more",
+    "decimals": "Use at most 2 decimals",
+    "integer": "Must be a whole number",
+    "sevenDays": "Provide exactly 7 days",
+    "impact": "Choose an impact",
+    "titleRequired": "Title is required",
+    "titleMax": "Use at most 120 characters",
+    "descriptionMax": "Use at most 500 characters"
+  }
+}

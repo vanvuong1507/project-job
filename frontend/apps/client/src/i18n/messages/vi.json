@@ -1,0 +1,60 @@
+{
+  "metadata": {
+    "title": "Xu hướng doanh thu",
+    "description": "Bảng theo dõi doanh thu, chi phí nhân công và lượt khách theo tuần."
+  },
+  "dashboard": {
+    "title": "Xu hướng doanh thu tuần này",
+    "titleCompare": "Xu hướng doanh thu tuần này so với kỳ trước",
+    "compare": "So sánh kỳ trước",
+    "export": "Xuất PNG",
+    "exportError": "Không xuất được ảnh. Vui lòng thử lại.",
+    "loading": "Đang tải xu hướng doanh thu",
+    "scrollHint": "Vuốt ngang để xem cả tuần",
+    "kpi": {
+      "totalRevenue": "Tổng doanh thu",
+      "averagePerDay": "Trung bình mỗi ngày",
+      "totalCovers": "Tổng lượt khách",
+      "vs": "so với"
+    },
+    "series": {
+      "pos": {
+        "label": "Doanh thu POS",
+        "current": "Doanh thu POS (Hiện tại)",
+        "previous": "Doanh thu trực tiếp (Kỳ trước)"
+      },
+      "eatclub": {
+        "label": "Doanh thu Eatclub",
+        "current": "Doanh thu Eatclub (Hiện tại)",
+        "previous": "Tổng doanh thu (Kỳ trước)"
+      },
+      "labour": {
+        "label": "Chi phí nhân công",
+        "current": "Chi phí nhân công (Hiện tại)",
+        "previous": "Chi phí nhân công (Kỳ trước)"
+      }
+    },
+    "legend": {
+      "label": "Chú thích biểu đồ",
+      "positive": "Sự kiện tác động tích cực",
+      "negative": "Sự kiện tác động tiêu cực"
+    },
+    "event": {
+      "positive": "Sự kiện tác động tích cực, {day}",
+      "negative": "Sự kiện tác động tiêu cực, {day}"
+    },
+    "invalidWeek": {
+      "title": "Không thể hiển thị tuần này",
+      "description": "Tuần trong đường dẫn phải là một ngày thứ Hai theo định dạng YYYY-MM-DD.",
+      "action": "Xem tuần mới nhất"
+    },
+    "empty": {
+      "title": "Chưa có dữ liệu doanh thu cho tuần này",
+      "description": "Chưa có số liệu nào cho {start} – {end}."
+    },
+    "error": {
+      "title": "Không tải được bảng điều khiển",
+      "description": "Dữ liệu doanh thu tạm thời không khả dụng. Vui lòng thử lại."
+    }
+  }
+}

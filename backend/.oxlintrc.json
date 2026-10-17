@@ -1,0 +1,25 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "unicorn", "oxc", "import", "vitest"],
+  "categories": { "correctness": "error", "suspicious": "warn" },
+  "rules": {
+    "eqeqeq": "error",
+    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "typescript/no-explicit-any": "error",
+    // Off on purpose: Nest DI reads constructor parameter types from decorator metadata, and
+    // `import type` would erase the injected class (DI then fails at runtime, not at compile time).
+    "typescript/consistent-type-imports": "off",
+    "typescript/no-extraneous-class": [
+      "warn",
+      { "allowWithDecorator": true, "allowStaticOnly": true }
+    ],
+    "import/no-unassigned-import": ["warn", { "allow": ["reflect-metadata", "**/pg-types.js"] }],
+    "import/no-cycle": "error",
+    "unicorn/no-array-sort": "off"
+  },
+  "overrides": [
+    { "files": ["src/database/scripts/*.ts", "scripts/*.mjs"], "rules": { "no-console": "off" } }
+  ],
+  "env": { "node": true },
+  "ignorePatterns": ["dist", "coverage", ".claude"]
+}

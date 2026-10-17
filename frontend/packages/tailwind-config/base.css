@@ -1,0 +1,36 @@
+/*
+ * Base stylesheet for every app and Storybook: Tailwind + design tokens + document defaults.
+ * Each package that contains class names ships its own `@source` stylesheet (e.g. @frontend/ui/styles.css).
+ */
+@import 'tailwindcss';
+@import './theme.css';
+
+/* `dark:` utilities follow the `.dark` class set by next-themes, not the OS media query. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  .dark {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-canvas font-sans text-foreground antialiased;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-ring;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}

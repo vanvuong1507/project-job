@@ -1,0 +1,25 @@
+{
+  "theme": {
+    "label": "Giao diện",
+    "light": "Sáng",
+    "dark": "Tối",
+    "system": "Theo hệ thống"
+  },
+  "locale": {
+    "label": "Ngôn ngữ"
+  },
+  "errors": {
+    "generic": "Đã có lỗi xảy ra. Vui lòng thử lại.",
+    "network": "Lỗi mạng — hãy kiểm tra kết nối và thử lại.",
+    "notFound": "Không tìm thấy trang",
+    "backHome": "Về trang chủ",
+    "retry": "Thử lại"
+  },
+  "actions": {
+    "cancel": "Huỷ",
+    "save": "Lưu",
+    "delete": "Xoá",
+    "edit": "Sửa",
+    "close": "Đóng"
+  }
+}

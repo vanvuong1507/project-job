@@ -1,0 +1,25 @@
+node_modules
+.next
+.turbo
+dist
+pnpm-lock.yaml
+next-env.d.ts
+
+# third-party Claude agents/skills (kept verbatim)
+.claude/agents/code-reviewer.md
+.claude/agents/frontend-developer.md
+.claude/agents/fullstack-developer.md
+.claude/agents/typescript-pro.md
+.claude/skills/code-reviewer/
+.claude/skills/react-best-practices/
+.claude/skills/senior-frontend/
+.claude/skills/senior-fullstack/
+.claude/skills/ui-ux-pro-max/
+
+storybook-static
+playwright-report
+test-results
+
+# managed by `next dev` (agentRules) and vendored Next.js skills — keep verbatim
+**/AGENTS.md
+apps/*/.claude/skills/next-*/

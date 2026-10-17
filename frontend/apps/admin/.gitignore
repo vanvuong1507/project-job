@@ -1,0 +1,2 @@
+# Mock backend data (created from src/mocks/fixtures/seed.json; reset with `pnpm mock:reset`)
+.mock-data/

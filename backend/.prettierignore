@@ -1,0 +1,5 @@
+dist
+coverage
+pnpm-lock.yaml
+.claude/skills/nestjs-best-practices
+.claude/skills/supabase-postgres-best-practices

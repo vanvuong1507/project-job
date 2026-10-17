@@ -1,0 +1,53 @@
+name: Backend
+
+on:
+  push:
+    branches: [main]
+    paths: ['backend/**', '.github/workflows/backend.yml']
+  pull_request:
+    paths: ['backend/**', '.github/workflows/backend.yml']
+
+concurrency:
+  group: backend-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    working-directory: backend
+
+jobs:
+  check:
+    name: Lint, typecheck, unit tests, build, migrations, e2e
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      DATABASE_URL: postgres://revenue:revenue@localhost:5432/revenue_dashboard
+    steps:
+      - uses: actions/checkout@v4
+
+      # PostgreSQL 16 ships with the Ubuntu runner image — no Docker service container needed.
+      - name: Start PostgreSQL
+        run: |
+          sudo systemctl start postgresql.service
+          sudo -u postgres psql -c "CREATE ROLE revenue WITH LOGIN PASSWORD 'revenue' CREATEDB;"
+
+      - uses: pnpm/action-setup@v4
+        with:
+          package_json_file: backend/package.json
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: backend/.nvmrc
+          cache: pnpm
+          cache-dependency-path: backend/pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile
+      - run: cp .env.example .env
+
+      - run: pnpm check
+      - name: Migrations apply, revert and re-apply cleanly
+        run: |
+          pnpm db:setup
+          node dist/database/scripts/revert.js
+          node dist/database/scripts/migrate.js
+      - name: Entities match the migrations (no forgotten migration)
+        run: pnpm migration:check
+      - run: pnpm test:e2e

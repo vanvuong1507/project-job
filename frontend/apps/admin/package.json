@@ -1,0 +1,49 @@
+{
+  "name": "@frontend/admin",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --port 3001",
+    "build": "next build",
+    "start": "next start --port 3001",
+    "lint": "eslint .",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test": "vitest run",
+    "mock:reset": "rm -rf .mock-data",
+    "test:e2e": "playwright test",
+    "test:e2e:evidence": "E2E_EVIDENCE=1 playwright test",
+    "test:e2e:report": "playwright show-report",
+    "test:e2e:ui": "playwright test --ui",
+    "clean": "rm -rf .next .turbo node_modules playwright-report test-results"
+  },
+  "dependencies": {
+    "@frontend/api-client": "workspace:*",
+    "@frontend/i18n": "workspace:*",
+    "@frontend/ui": "workspace:*",
+    "@t3-oss/env-nextjs": "catalog:",
+    "jose": "catalog:",
+    "next": "catalog:",
+    "next-intl": "catalog:",
+    "next-themes": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "server-only": "^0.0.1",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@frontend/eslint-config": "workspace:*",
+    "@frontend/next-config": "workspace:*",
+    "@frontend/playwright-config": "workspace:*",
+    "@frontend/tailwind-config": "workspace:*",
+    "@frontend/typescript-config": "workspace:*",
+    "@playwright/test": "catalog:",
+    "@tailwindcss/postcss": "catalog:",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "eslint": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

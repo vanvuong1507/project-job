@@ -1,0 +1,3 @@
+/* Lets Tailwind in the consuming app find the class names used by @frontend/ui. */
+@source './';
+@source not './**/*.stories.tsx';

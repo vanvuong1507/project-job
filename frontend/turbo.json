@@ -1,0 +1,75 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "ui": "tui",
+  "globalEnv": ["NODE_ENV", "CI", "SKIP_ENV_VALIDATION"],
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "env": ["NEXT_PUBLIC_*"],
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "build-storybook": {
+      "dependsOn": ["^build"],
+      "outputs": ["storybook-static/**"]
+    },
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
+    "typecheck": {
+      "dependsOn": ["^typecheck"]
+    },
+    "test": {
+      "dependsOn": ["^build"],
+      "outputs": []
+    },
+    "test:e2e": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "env": ["NEXT_PUBLIC_*"],
+      "cache": false,
+      "passThroughEnv": [
+        "DATA_SOURCE",
+        "API_URL",
+        "ENABLE_MOCK_API",
+        "MOCK_DELAY_MS",
+        "LOG_LEVEL",
+        "AUTH_SECRET",
+        "E2E_EVIDENCE"
+      ],
+      "outputs": ["playwright-report/**", "test-results/**"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true,
+      "passThroughEnv": [
+        "DATA_SOURCE",
+        "API_URL",
+        "ENABLE_MOCK_API",
+        "MOCK_DELAY_MS",
+        "LOG_LEVEL",
+        "AUTH_SECRET"
+      ]
+    },
+    "start": {
+      "dependsOn": ["build"],
+      "cache": false,
+      "persistent": true,
+      "passThroughEnv": [
+        "DATA_SOURCE",
+        "API_URL",
+        "ENABLE_MOCK_API",
+        "MOCK_DELAY_MS",
+        "LOG_LEVEL",
+        "AUTH_SECRET"
+      ]
+    },
+    "storybook": {
+      "cache": false,
+      "persistent": true
+    },
+    "clean": {
+      "cache": false
+    }
+  }
+}

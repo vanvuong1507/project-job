@@ -1,0 +1,60 @@
+{
+  "metadata": {
+    "title": "Revenue Trend",
+    "description": "Weekly revenue, labour cost and covers dashboard."
+  },
+  "dashboard": {
+    "title": "This Week's Revenue Trend",
+    "titleCompare": "This Week's Revenue Trend vs Previous Period",
+    "compare": "Compare to Previous",
+    "export": "Export PNG",
+    "exportError": "Couldn't export the image. Please try again.",
+    "loading": "Loading revenue trend",
+    "scrollHint": "Swipe sideways to see the whole week",
+    "kpi": {
+      "totalRevenue": "Total Revenue",
+      "averagePerDay": "Average per Day",
+      "totalCovers": "Total Covers",
+      "vs": "vs"
+    },
+    "series": {
+      "pos": {
+        "label": "POS Revenue",
+        "current": "POS Revenue (Current)",
+        "previous": "Direct Revenue (Previous)"
+      },
+      "eatclub": {
+        "label": "Eatclub Revenue",
+        "current": "Eatclub Revenue (Current)",
+        "previous": "Total Revenue (Previous)"
+      },
+      "labour": {
+        "label": "Labour Costs",
+        "current": "Labour Costs (Current)",
+        "previous": "Labour Costs (Previous)"
+      }
+    },
+    "legend": {
+      "label": "Chart legend",
+      "positive": "Positive Event Impact",
+      "negative": "Negative Event Impact"
+    },
+    "event": {
+      "positive": "Positive event impact, {day}",
+      "negative": "Negative event impact, {day}"
+    },
+    "invalidWeek": {
+      "title": "This week can't be shown",
+      "description": "The week in the link must be a Monday in YYYY-MM-DD format.",
+      "action": "Show the latest week"
+    },
+    "empty": {
+      "title": "No revenue data for this week",
+      "description": "Nothing has been recorded for {start} – {end} yet."
+    },
+    "error": {
+      "title": "We couldn't load the dashboard",
+      "description": "The revenue data is temporarily unavailable. Please try again."
+    }
+  }
+}

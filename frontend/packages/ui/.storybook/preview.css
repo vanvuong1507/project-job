@@ -1,0 +1,9 @@
+@import '@frontend/tailwind-config/base.css';
+
+/* Scan components and stories (apps use ../src/styles.css, which skips stories). */
+@source '../src';
+
+/* Apps get --font-inter from next/font; Storybook loads Inter in preview-head.html. */
+:root {
+  --font-inter: 'Inter';
+}

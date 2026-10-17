@@ -1,0 +1,22 @@
+# env (keep the example)
+.env
+.env.*
+!.env.example
+
+# build / test output
+/dist
+/coverage
+*.tsbuildinfo
+
+# dependencies
+/node_modules
+
+# OS / editors
+.DS_Store
+.idea
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# local Claude Code settings
+.claude/settings.local.json

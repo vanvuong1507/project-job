@@ -1,0 +1,167 @@
+/*
+ * Design tokens — three layers:
+ *   1. Primitives  (`--palette-*`, :root)  raw values measured from docs/ui-reference. Never used in markup.
+ *   2. Semantic    (`@theme`)              what components use: bg-canvas, text-muted-foreground, bg-chart-pos…
+ *   3. Component   (in packages/ui)        variants built from semantic tokens only.
+ *
+ * Tailwind's default palette is disabled (`--color-*: initial`), so only these tokens exist as utilities.
+ * `@theme static` emits all of them as CSS variables, so `colorVar()` works for tokens no class uses.
+ * Dark mode: the `.dark` block at the end overrides every semantic `--color-*` (white-label works the same way).
+ * Keep `packages/ui/src/theme/tokens.ts` in sync (a unit test enforces it).
+ */
+
+:root {
+  /* neutrals */
+  --palette-white: #ffffff;
+  --palette-black: #000000;
+  --palette-sand-50: #f8f7f2;
+  --palette-sand-100: #f6f5f3;
+  --palette-sand-200: #ebeae6;
+  --palette-sand-300: #dddbd5;
+  --palette-ink-400: #8a8a8a;
+  --palette-ink-500: #6b6b6b;
+  --palette-ink-800: #2b2b2b;
+  --palette-ink-900: #2a2a2a;
+  --palette-gray-300: #bdbdbd;
+
+  /* brand */
+  --palette-yellow-400: #fac841;
+  --palette-yellow-500: #d2ac3d;
+  --palette-indigo-200: #caccfc;
+  --palette-indigo-500: #595bee;
+  --palette-orange-200: #f8cfbd;
+  --palette-orange-500: #ec6629;
+
+  /* status */
+  --palette-green-50: #eafbf1;
+  /* status text colours: the video's #22a35a / #d23b4a darkened just enough for WCAG AA on surfaces */
+  --palette-green-600: #1b8147;
+  --palette-red-50: #fdf3f4;
+  --palette-red-600: #d03342;
+
+  /* dark primitives (warm charcoal, matching the sand tones) */
+  --palette-char-950: #141413;
+  --palette-char-900: #1c1c1b;
+  --palette-char-850: #262624;
+  --palette-char-800: #2f2f2d;
+  --palette-char-700: #42423f;
+  --palette-char-500: #8a8a86;
+  --palette-char-300: #b4b4b0;
+  --palette-char-100: #ededeb;
+  --palette-char-200: #e3e3e0;
+  --palette-gray-600: #6b6b68;
+  --palette-yellow-300: #ffd866;
+  --palette-indigo-400: #8587f7;
+  --palette-indigo-800: #3f418a;
+  --palette-orange-400: #f2804a;
+  --palette-orange-800: #73402a;
+  --palette-green-400: #4ccb80;
+  --palette-green-950: #12301f;
+  --palette-red-400: #f2707a;
+  --palette-red-950: #3a1a1e;
+}
+
+/* `static`: emit every token as a CSS variable, even if no utility uses it — JS reads them via colorVar(). */
+@theme static {
+  --color-*: initial;
+
+  /* surfaces */
+  --color-canvas: var(--palette-sand-50);
+  --color-surface: var(--palette-white);
+  --color-surface-muted: var(--palette-sand-100);
+  --color-border: var(--palette-sand-200);
+  --color-border-strong: var(--palette-sand-300);
+
+  /* text */
+  --color-foreground: var(--palette-ink-900);
+  --color-muted-foreground: var(--palette-ink-500);
+  --color-subtle-foreground: var(--palette-ink-400);
+
+  /* actions */
+  --color-primary: var(--palette-ink-800);
+  --color-primary-foreground: var(--palette-white);
+  --color-accent: var(--palette-yellow-400);
+  --color-accent-hover: var(--palette-yellow-500);
+  --color-accent-foreground: var(--palette-ink-900);
+  --color-ring: var(--palette-ink-800);
+  /* modal scrim — dark in both themes (foreground flips to light in dark mode) */
+  --color-overlay: var(--palette-black);
+
+  /* status */
+  --color-positive: var(--palette-green-600);
+  --color-positive-soft: var(--palette-green-50);
+  --color-negative: var(--palette-red-600);
+  --color-negative-soft: var(--palette-red-50);
+
+  /* data visualisation — current / previous period */
+  --color-chart-pos: var(--palette-ink-900);
+  --color-chart-eatclub: var(--palette-indigo-500);
+  --color-chart-labour: var(--palette-orange-500);
+  --color-chart-pos-prev: var(--palette-gray-300);
+  --color-chart-eatclub-prev: var(--palette-indigo-200);
+  --color-chart-labour-prev: var(--palette-orange-200);
+  --color-chart-grid: var(--palette-sand-200);
+
+  /* shape */
+  --radius-card: 1rem;
+  --radius-tile: 0.875rem;
+  --radius-control: 0.625rem;
+
+  /* elevation */
+  --shadow-card: 0 1px 2px 0 rgb(0 0 0 / 0.03);
+
+  /* typography */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* motion */
+  --ease-emphasized: cubic-bezier(0.2, 0, 0, 1);
+  --animate-fade-in: fade-in 150ms var(--ease-emphasized);
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(2px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/*
+ * Dark theme: override the semantic tokens only (components never change).
+ * Unlayered so it wins over the `@theme` values; toggled by `.dark` on <html> (next-themes).
+ */
+.dark {
+  --color-canvas: var(--palette-char-950);
+  --color-surface: var(--palette-char-900);
+  --color-surface-muted: var(--palette-char-850);
+  --color-border: var(--palette-char-800);
+  --color-border-strong: var(--palette-char-700);
+
+  --color-foreground: var(--palette-char-100);
+  --color-muted-foreground: var(--palette-char-300);
+  --color-subtle-foreground: var(--palette-char-500);
+
+  --color-primary: var(--palette-char-100);
+  --color-primary-foreground: var(--palette-char-900);
+  --color-accent: var(--palette-yellow-400);
+  --color-accent-hover: var(--palette-yellow-300);
+  --color-accent-foreground: var(--palette-char-900);
+  --color-ring: var(--palette-char-100);
+  --color-overlay: var(--palette-black);
+
+  --color-positive: var(--palette-green-400);
+  --color-positive-soft: var(--palette-green-950);
+  --color-negative: var(--palette-red-400);
+  --color-negative-soft: var(--palette-red-950);
+
+  --color-chart-pos: var(--palette-char-200);
+  --color-chart-eatclub: var(--palette-indigo-400);
+  --color-chart-labour: var(--palette-orange-400);
+  --color-chart-pos-prev: var(--palette-gray-600);
+  --color-chart-eatclub-prev: var(--palette-indigo-800);
+  --color-chart-labour-prev: var(--palette-orange-800);
+  --color-chart-grid: var(--palette-char-800);
+}

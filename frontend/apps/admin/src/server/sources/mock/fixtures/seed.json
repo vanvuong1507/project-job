@@ -1,0 +1,173 @@
+{
+  "dailyMetrics": [
+    {
+      "id": "9dbf3c3e-3504-5b8a-a3aa-5d64f957c97f",
+      "date": "2026-10-05",
+      "posRevenue": 1540,
+      "eatclubRevenue": 290,
+      "labourCost": 520,
+      "covers": 110,
+      "createdAt": "2026-10-16T00:00:00.000Z",
+      "updatedAt": "2026-10-16T00:00:00.000Z"
+    },
+    {
+      "id": "0a4d7a30-5d08-58aa-9b50-c50930a9dff6",
+      "date": "2026-10-06",
+      "posRevenue": 1810,
+      "eatclubRevenue": 330,
+      "labourCost": 640,
+      "covers": 112,
+      "createdAt": "2026-10-16T00:00:00.000Z",
+      "updatedAt": "2026-10-16T00:00:00.000Z"
+    },
+    {
+      "id": "66d7e722-1e3e-512c-8ec6-c76556a8c492",
+      "date": "2026-10-07",
+      "posRevenue": 1600,
+      "eatclubRevenue": 270,
+      "labourCost": 750,
+      "covers": 114,
+      "createdAt": "2026-10-16T00:00:00.000Z",
+      "updatedAt": "2026-10-16T00:00:00.000Z"
+    },
+    {
+      "id": "eb3f1829-30a8-5a91-a2f9-a71d92d01aa3",
+      "date": "2026-10-08",
+      "posRevenue": 1550,
+      "eatclubRevenue": 270,
+      "labourCost": 540,
+      "covers": 110,
+      "createdAt": "2026-10-16T00:00:00.000Z",
+      "updatedAt": "2026-10-16T00:00:00.000Z"
+    },
+    {
+      "id": "d2bb1d16-3107-5635-8179-f851e21f883d",
+      "date": "2026-10-09",
+      "posRevenue": 1690,
+      "eatclubRevenue": 280,
+      "labourCost": 580,
+      "covers": 106,
+      "createdAt": "2026-10-16T00:00:00.000Z",
+      "updatedAt": "2026-10-16T00:00:00.000Z"
+    },
+    {
+      "id": "a8ae5526-b521-52d3-acbd-e559bbb36b73",
+      "date": "2026-10-10",
+      "posRevenue": 1940,
+      "eatclubRevenue": 680,
+      "labourCost": 780,
+      "covers": 140,
+      "createdAt": "2026-10-16T00:00:00.000Z",
+      "updatedAt": "2026-10-16T00:00:00.000Z"
+    },
+    {
+      "id": "33df93aa-a7f8-52f7-a3b4-4c4b90debed5",
+      "date": "2026-10-11",
+      "posRevenue": 2280,
+      "eatclubRevenue": 452,
+      "labourCost": 1120,
+      "covers": 128,
+      "createdAt": "2026-10-16T00:00:00.000Z",
+      "updatedAt": "2026-10-16T00:00:00.000Z"
+    },
+    {
+      "id": "1c745b39-3b94-566e-8300-3de72cefb2a7",
+      "date": "2026-10-12",
+      "posRevenue": 1720,
+      "eatclubRevenue": 310,
+      "labourCost": 600,
+      "covers": 118,
+      "createdAt": "2026-10-16T00:00:00.000Z",
+      "updatedAt": "2026-10-16T00:00:00.000Z"
+    },
+    {
+      "id": "9a3914bc-59ff-5861-a527-b768267c1ac2",
+      "date": "2026-10-13",
+      "posRevenue": 1790,
+      "eatclubRevenue": 320,
+      "labourCost": 630,
+      "covers": 120,
+      "createdAt": "2026-10-16T00:00:00.000Z",
+      "updatedAt": "2026-10-16T00:00:00.000Z"
+    },
+    {
+      "id": "0d7daad1-5ad8-5aab-ae8d-7d078b770fc6",
+      "date": "2026-10-14",
+      "posRevenue": 1800,
+      "eatclubRevenue": 320,
+      "labourCost": 880,
+      "covers": 121,
+      "createdAt": "2026-10-16T00:00:00.000Z",
+      "updatedAt": "2026-10-16T00:00:00.000Z"
+    },
+    {
+      "id": "34394943-fcaa-5f6e-baa3-5b9f8396b5d9",
+      "date": "2026-10-15",
+      "posRevenue": 1780,
+      "eatclubRevenue": 280,
+      "labourCost": 640,
+      "covers": 117,
+      "createdAt": "2026-10-16T00:00:00.000Z",
+      "updatedAt": "2026-10-16T00:00:00.000Z"
+    },
+    {
+      "id": "c4fab9de-c89f-5726-9d6b-069a39a57976",
+      "date": "2026-10-16",
+      "posRevenue": 1720,
+      "eatclubRevenue": 310,
+      "labourCost": 580,
+      "covers": 112,
+      "createdAt": "2026-10-16T00:00:00.000Z",
+      "updatedAt": "2026-10-16T00:00:00.000Z"
+    },
+    {
+      "id": "5703e963-44b5-5480-b321-391ecece8fcd",
+      "date": "2026-10-17",
+      "posRevenue": 2180,
+      "eatclubRevenue": 720,
+      "labourCost": 850,
+      "covers": 150,
+      "createdAt": "2026-10-16T00:00:00.000Z",
+      "updatedAt": "2026-10-16T00:00:00.000Z"
+    },
+    {
+      "id": "b04192c7-8109-552e-8db4-63d1b24f4a9d",
+      "date": "2026-10-18",
+      "posRevenue": 2250,
+      "eatclubRevenue": 474,
+      "labourCost": 1120,
+      "covers": 133,
+      "createdAt": "2026-10-16T00:00:00.000Z",
+      "updatedAt": "2026-10-16T00:00:00.000Z"
+    }
+  ],
+  "events": [
+    {
+      "id": "a5593ac3-bbb4-57de-9624-fd325386771e",
+      "date": "2026-10-09",
+      "impact": "POSITIVE",
+      "title": "School holidays begin",
+      "description": "Family bookings up across lunch service.",
+      "createdAt": "2026-10-16T00:00:00.000Z",
+      "updatedAt": "2026-10-16T00:00:00.000Z"
+    },
+    {
+      "id": "3c262ec3-3e46-5136-bdd1-f5ff69b1e2fe",
+      "date": "2026-10-16",
+      "impact": "NEGATIVE",
+      "title": "Heavy rain",
+      "description": "Storm warning kept walk-in traffic low all evening.",
+      "createdAt": "2026-10-16T00:00:00.000Z",
+      "updatedAt": "2026-10-16T00:00:00.000Z"
+    },
+    {
+      "id": "90ced6db-e8b8-534f-b548-e6172bb60204",
+      "date": "2026-10-17",
+      "impact": "POSITIVE",
+      "title": "Local food festival",
+      "description": "Festival crowds boosted dinner covers and Eatclub orders.",
+      "createdAt": "2026-10-16T00:00:00.000Z",
+      "updatedAt": "2026-10-16T00:00:00.000Z"
+    }
+  ]
+}

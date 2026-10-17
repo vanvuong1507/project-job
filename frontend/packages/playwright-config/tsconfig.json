@@ -1,0 +1,9 @@
+{
+  "extends": "@frontend/typescript-config/base.json",
+  "compilerOptions": {
+    "types": ["node"],
+    // page.evaluate() callbacks run in the browser.
+    "lib": ["ES2022", "DOM", "DOM.Iterable"]
+  },
+  "include": ["*.ts"]
+}
